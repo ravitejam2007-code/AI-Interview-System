@@ -1,0 +1,16 @@
+flask
+flask-cors
+openai
+google-generativeai
+pdfplumber
+python-docx
+nltk
+spacy
+scikit-learn
+transformers
+werkzeug
+python-dotenv
+flask-sqlalchemy
+pyjwt
+bcrypt
+gunicorn
