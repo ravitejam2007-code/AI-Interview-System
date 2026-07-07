@@ -163,6 +163,12 @@ const Interview = () => {
             <textarea
               value={answer}
               onChange={(e) => setAnswer(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                  e.preventDefault();
+                  handleSend();
+                }
+              }}
               placeholder={evaluating ? "Evaluating your answer..." : "Type your answer here..."}
               disabled={evaluating}
               className="w-full bg-slate-900 border border-white/10 rounded-2xl p-3 sm:p-4 pr-12 sm:pr-14 focus:outline-none focus:border-indigo-500 transition-all resize-none h-20 sm:h-24 text-sm sm:text-base disabled:opacity-50"
